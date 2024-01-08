@@ -2,31 +2,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap')
 
 // Primary Colors
-$Blue: hsl(223, 87%, 63%)
+$primary-blue: hsl(223, 87%, 63%)
 //Secondary Colors
-$Pale-Blue: hsl(223, 100%, 88%)
-$Light-Red: hsl(354, 100%, 66%)
+$secondary-pale-blue: hsl(223, 100%, 88%)
+$alert-light-red: hsl(354, 100%, 66%)
 //Neutral colors
-$Gray: hsl(0, 0%, 59%)
-$Very-Dark-Blue: hsl(209, 33%, 12%)
+$neutral-gray: hsl(0, 0%, 59%)
+$neutral-white: hsl(0, 0%, 100%)
+$neutral-very-dark-blue: hsl(209, 33%, 12%)
+$neutral-very-soft-blue: hsl(223, 60%, 83%)
+
 //Typography
 $Font-Franklin: 'Libre Franklin', sans-serif
+
+// Behaviors
+
+@mixin flex-behavior
+  display: flex
+  flex-direction: column
+  align-items: center
 
 body
   font-family: $Font-Franklin
   width: 50%
   margin: 0 auto
 
+.logo
+  @include flex-behavior
+  padding-top: 50px
 
-  // Button Style
+.information
+  @include flex-behavior
 
-.btn-notify
-  color: #FFFFFF
-  background: $Blue
+.information h1
+  font-weight: 300
+  color: $neutral-gray
+  font-size: 35px
+
+.soon-txt
+  font-weight: 700
+  color: $neutral-very-dark-blue
+
+.information p
+  margin: -5px
+  padding-bottom: 30px
+
+// Button Style
+@mixin btn
   height: 56px
   width: 200px
   border: 0
   border-radius: 35px
+
+.form-notify
+  padding-top: 30px
+
+.btn-notify
+  @include btn
+  color: $neutral-white
+  background: $primary-blue
+
 
 // Input Style
 
@@ -36,17 +71,23 @@ body
   height: 56px
   border-radius: 28px
   border: 1px solid #C2D3FF
-  background: #FFFFFF
+  background: $neutral-white
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.00)
   flex-shrink: 0
   margin-right: 16px
 
   //TEXT
-  text-align: center
-  font-size: 16px
+  padding-left: 10px
+  font-size: 15px
   font-weight: 300
   line-height: 20px
-  color: #B8C7ED
+  color: $neutral-very-soft-blue
 
 // Img Hero
+.hero-img
+  @include flex-behavior
+  padding-top: 60px
 
+.hero-img img
+  height: 30rem
+  width: auto
