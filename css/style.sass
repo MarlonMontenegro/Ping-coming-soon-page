@@ -12,7 +12,6 @@ $neutral-gray: hsl(0, 0%, 59%)
 $neutral-white: hsl(0, 0%, 100%)
 $neutral-very-dark-blue: hsl(209, 33%, 12%)
 $neutral-very-soft-blue: hsl(223, 60%, 83%)
-
 //Typography
 $Font-Franklin: 'Libre Franklin', sans-serif
 
@@ -29,7 +28,7 @@ $Font-Franklin: 'Libre Franklin', sans-serif
   border: 0
   border-radius: 35px
 
-
+/*  ========================== DESIGN  ==========================  */
 body
   font-family: $Font-Franklin
   width: 50%
@@ -106,23 +105,29 @@ body
 
 .social-media li
   list-style: none
-  border: 1px solid $neutral-very-soft-blue
-  border-radius: 50%
   margin: 10px
+
 
 ion-icon
   color: $primary-blue
   padding: 5px
   font-size: 15px
   cursor: pointer
+  border: 1px solid $neutral-very-soft-blue
+  border-radius: 50%
 
 // Attribution
 
 .attribution
-  font-family: $Font-Franklin
-  color: $neutral-very-dark-blue
   display: flex
   flex-direction: row
   align-items: center
-  padding-left: 120px
-  padding-bottom: 10px
+  padding-left: 30%
+  padding-bottom: 20px
+  font-size: 12px
+
+.attribution a
+  font-family: $Font-Franklin
+  color: $neutral-very-dark-blue
+  font-size: 12px
+  padding: 5px
