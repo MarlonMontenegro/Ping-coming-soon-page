@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+/*  ========================== VARIABLES  ==========================  */
+/* ========================== Mixins ========================== */
 body {
   font-family: "Libre Franklin", sans-serif;
   width: 50%;
@@ -45,6 +47,7 @@ body {
   border-radius: 35px;
   color: hsl(0, 0%, 100%);
   background: hsl(223, 87%, 63%);
+  cursor: pointer;
 }
 
 .input-box {
@@ -71,8 +74,44 @@ body {
 }
 
 .hero-img img {
-  height: 30rem;
+  height: 20rem;
   width: auto;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-media li {
+  list-style: none;
+  border: 1px solid hsl(223, 60%, 83%);
+  border-radius: 50%;
+  margin: 10px;
+}
+
+ion-icon {
+  color: hsl(223, 87%, 63%);
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.attribution {
+  font-family: "Libre Franklin", sans-serif;
+  color: hsl(209, 33%, 12%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 120px;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
-// Google Font.
+// Google Font Franklin, Weight 300,600 & 700.
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap')
 
+/*  ========================== VARIABLES  ==========================  */
 // Primary Colors
 $primary-blue: hsl(223, 87%, 63%)
 //Secondary Colors
@@ -15,12 +16,19 @@ $neutral-very-soft-blue: hsl(223, 60%, 83%)
 //Typography
 $Font-Franklin: 'Libre Franklin', sans-serif
 
-// Behaviors
+/* ========================== Mixins ========================== */
 
-@mixin flex-behavior
+@mixin flex-behavior-column
   display: flex
   flex-direction: column
   align-items: center
+
+@mixin btn
+  height: 56px
+  width: 200px
+  border: 0
+  border-radius: 35px
+
 
 body
   font-family: $Font-Franklin
@@ -28,11 +36,11 @@ body
   margin: 0 auto
 
 .logo
-  @include flex-behavior
+  @include flex-behavior-column
   padding-top: 50px
 
 .information
-  @include flex-behavior
+  @include flex-behavior-column
 
 .information h1
   font-weight: 300
@@ -48,11 +56,6 @@ body
   padding-bottom: 30px
 
 // Button Style
-@mixin btn
-  height: 56px
-  width: 200px
-  border: 0
-  border-radius: 35px
 
 .form-notify
   padding-top: 30px
@@ -61,12 +64,11 @@ body
   @include btn
   color: $neutral-white
   background: $primary-blue
-
+  cursor: pointer
 
 // Input Style
-
 .input-box
-  //LAYOUT
+  //Layout
   width: 421px
   height: 56px
   border-radius: 28px
@@ -76,7 +78,7 @@ body
   flex-shrink: 0
   margin-right: 16px
 
-  //TEXT
+  //Txt
   padding-left: 10px
   font-size: 15px
   font-weight: 300
@@ -85,9 +87,42 @@ body
 
 // Img Hero
 .hero-img
-  @include flex-behavior
+  @include flex-behavior-column
   padding-top: 60px
 
 .hero-img img
-  height: 30rem
+  height: 20rem
   width: auto
+
+// Social Media.
+
+.social-media
+  @include flex-behavior-column
+
+.social-media ul
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.social-media li
+  list-style: none
+  border: 1px solid $neutral-very-soft-blue
+  border-radius: 50%
+  margin: 10px
+
+ion-icon
+  color: $primary-blue
+  padding: 5px
+  font-size: 15px
+  cursor: pointer
+
+// Attribution
+
+.attribution
+  font-family: $Font-Franklin
+  color: $neutral-very-dark-blue
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding-left: 120px
+  padding-bottom: 10px
