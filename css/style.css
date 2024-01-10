@@ -26,6 +26,12 @@ body {
   color: hsl(0, 0%, 59%);
   font-size: 35px;
 }
+@media (max-width: 480px) {
+  .information h1 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+}
 
 .soon-txt {
   font-weight: 700;
@@ -49,6 +55,12 @@ body {
   color: hsl(0, 0%, 100%);
   background: hsl(223, 87%, 63%);
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .btn-notify {
+    margin-top: 15px;
+    width: 435px;
+  }
 }
 
 .input-box {
@@ -78,6 +90,12 @@ body {
   height: 20rem;
   width: auto;
 }
+@media (max-width: 480px) {
+  .hero-img img {
+    height: 15rem;
+    width: auto;
+  }
+}
 
 .social-media {
   display: flex;
@@ -104,6 +122,11 @@ ion-icon {
   border: 1px solid hsl(223, 60%, 83%);
   border-radius: 50%;
 }
+@media (max-width: 480px) {
+  ion-icon {
+    font-size: 20px;
+  }
+}
 
 .attribution {
   display: flex;
@@ -113,12 +136,24 @@ ion-icon {
   padding-bottom: 20px;
   font-size: 12px;
 }
+@media (max-width: 480px) {
+  .attribution {
+    padding-left: 10px;
+    font-size: 8px;
+  }
+}
 
 .attribution a {
   font-family: "Libre Franklin", sans-serif;
-  color: hsl(209, 33%, 12%);
+  color: hsl(0, 0%, 59%);
   font-size: 12px;
   padding: 5px;
+}
+@media (max-width: 480px) {
+  .attribution a {
+    font-size: 8px;
+    padding: 2px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
